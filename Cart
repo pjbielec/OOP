@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+public class Cart {
+
+	ArrayList<String> cartItemsNames = new ArrayList<String>();
+	ArrayList<Integer> cartItemsPrices = new ArrayList<Integer>();
+
+	public void itemsInCart() {
+
+		System.out.println("In cart are:");
+
+		for (String item : cartItemsNames) {
+			System.out.println(item);
+		}
+
+	}
+
+	public int priceOfCart() {
+
+		int price = 0;
+
+		for (Integer item : cartItemsPrices) {
+
+			price = price + item;
+
+		}
+
+		return price;
+
+	}
+
+}
