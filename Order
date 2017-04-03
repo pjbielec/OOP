@@ -1,0 +1,27 @@
+
+public class Order {
+
+	private int customerMoney;
+	private String customerName;
+	private int finalPrice;
+	private int cashDifference;
+
+	public Order(int customerMoney, String customerName, int finalPrice) {
+		this.customerMoney = customerMoney;
+		this.customerName = customerName;
+		this.finalPrice = finalPrice;
+	}
+
+	@Override
+	public String toString() {
+		cashDifference = customerMoney - finalPrice;
+
+		if (cashDifference >= 0) {
+			return "Customer " + customerName + " paid " + finalPrice + " and left shop with " + cashDifference
+					+ " zlotys";
+		} else {
+			return "Customer " + customerName + " got cought stealing and was thrown to jail";
+		}
+	}
+
+}
