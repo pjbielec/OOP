@@ -1,0 +1,30 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Commodity carrot = new Food("Carrot", 5);
+		Food apple = new Food("Apple", 7);
+
+		Customer cust1 = new Customer("Joe", 35, 40);
+		System.out.println(cust1.toString());
+
+		Cart cart1 = new Cart();
+
+		cart1.cartItemsNames.add(carrot.getName());
+		cart1.cartItemsNames.add(apple.getName());
+
+		cart1.itemsInCart();
+
+		cart1.cartItemsPrices.add(carrot.getPrice());
+		cart1.cartItemsPrices.add(apple.getPrice());
+
+		System.out.print("Total cost: ");
+		int cart1Cost = cart1.priceOfCart();
+		System.out.println(cart1Cost);
+
+		Order orderOne = new Order(cust1.getMoney(), cust1.getName(), cart1.priceOfCart());
+		System.out.println(orderOne.toString());
+
+	}
+}
