@@ -1,0 +1,13 @@
+
+public class Food extends Commodity {
+
+	public Food(String name, int price) {
+		super(name, price);
+	}
+
+	@Override
+	public String toString() {
+		return "Food name is: ";
+	}
+
+}
